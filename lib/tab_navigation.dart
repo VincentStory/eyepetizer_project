@@ -1,4 +1,5 @@
 import 'package:eyepetizer_project/config/string.dart';
+import 'package:eyepetizer_project/page/home/home_page.dart';
 import 'package:eyepetizer_project/utils/toast_util.dart';
 import 'package:eyepetizer_project/viewmodel/tab_navigation_viewmodel.dart';
 import 'package:eyepetizer_project/widget/provide_widget.dart';
@@ -28,7 +29,7 @@ class _TabNavigationState extends State<TabNavigation> {
           physics: NeverScrollableScrollPhysics(),
           children: [
             // Container(color: Colors.blue),
-            // HomePage(),
+            const HomePage(),
             Container(color: Colors.brown),
             Container(color: Colors.amber),
             Container(color: Colors.red),
@@ -81,13 +82,13 @@ class _TabNavigationState extends State<TabNavigation> {
 
   List<BottomNavigationBarItem> _item() {
     return [
-      _bottomItem(LeoString.home, 'images/ic_home_normal.png',
+      _bottomItem(ConfigString.home, 'images/ic_home_normal.png',
           'images/ic_home_selected.png'),
-      _bottomItem(LeoString.discovery, 'images/ic_discovery_normal.png',
+      _bottomItem(ConfigString.discovery, 'images/ic_discovery_normal.png',
           'images/ic_discovery_selected.png'),
-      _bottomItem(LeoString.hot, 'images/ic_hot_normal.png',
+      _bottomItem(ConfigString.hot, 'images/ic_hot_normal.png',
           'images/ic_hot_selected.png'),
-      _bottomItem(LeoString.mine, 'images/ic_mine_normal.png',
+      _bottomItem(ConfigString.mine, 'images/ic_mine_normal.png',
           'images/ic_mine_selected.png'),
     ];
   }
@@ -112,7 +113,7 @@ class _TabNavigationState extends State<TabNavigation> {
     if (lastTime == null ||
         DateTime.now().difference(lastTime!) > const Duration(seconds: 2)) {
       lastTime = DateTime.now();
-      LeoToast.showTip(LeoString.exit_tip);
+      LeoToast.showTip(ConfigString.exit_tip);
       return false;
     } else {
       // 自动出栈

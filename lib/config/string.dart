@@ -1,4 +1,4 @@
-class LeoString {
+class ConfigString {
   // app
   static const String exit_tip = '再按一次退出';
   static const String home = '首页';

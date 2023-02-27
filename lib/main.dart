@@ -6,6 +6,7 @@ import 'package:eyepetizer_project/http/http_manager.dart';
 import 'package:eyepetizer_project/tab_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,12 +64,20 @@ class GetMaterialappWidget extends StatefulWidget {
 class _GetMaterialappWidgetState extends State<GetMaterialappWidget> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    // return MaterialApp(
+    //   title: "EyePetizer",
+    //   initialRoute: '/',
+    //   routes: {
+    //     '/': (BuildContext context) => widget.child,
+    //   },
+    // );
+    return GetMaterialApp(
       title: "EyePetizer",
       initialRoute: '/',
-      routes: {
-        '/': (BuildContext context) => widget.child,
-      },
+      getPages: [
+        GetPage(name: '/', page: () => widget.child),
+      ],
     );
+
   }
 }
