@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
+
 class ProviderWidget<T extends ChangeNotifier> extends StatefulWidget {
   final T model;
   final Widget? child;
@@ -18,27 +20,27 @@ class ProviderWidget<T extends ChangeNotifier> extends StatefulWidget {
 
   @override
   _ProviderWidgetState createState() {
-    return _ProviderWidgetState();
+    return _ProviderWidgetState<T>();
   }
 }
 
 class _ProviderWidgetState<T extends ChangeNotifier>
     extends State<ProviderWidget<T>> {
-  T? model;
+  late T model;
 
   @override
   void initState() {
     super.initState();
     model = widget.model;
     if (widget.onModelInit != null && model != null) {
-      widget.onModelInit!(model!);
+      widget.onModelInit!(model);
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => model,
+      create: (_) => model,
       child: Consumer(
         builder: widget.builder,
         child: widget.child,

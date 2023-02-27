@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         );
 
         var widget = snapshot.connectionState == ConnectionState.done
-            ? const TabNavigation()
+            ? TabNavigation()
             : const Scaffold(
                 body: Center(
                   child: CircularProgressIndicator(),
