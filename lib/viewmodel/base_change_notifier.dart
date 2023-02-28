@@ -1,8 +1,12 @@
 import 'package:flutter/cupertino.dart';
 
+import '../widget/loading_state_widget.dart';
+
 class BaseChangeNotifier extends ChangeNotifier {
   // 页面销毁则不发送通知
   bool _dispose = false;
+
+  ViewState viewState = ViewState.loading;
 
   @override
   void dispose() {

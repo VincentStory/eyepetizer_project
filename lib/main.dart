@@ -1,12 +1,11 @@
 import 'dart:io';
 
-import 'package:eyepetizer_project/app_init.dart';
-import 'package:eyepetizer_project/http/Url.dart';
-import 'package:eyepetizer_project/http/http_manager.dart';
-import 'package:eyepetizer_project/tab_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+
+import 'app_init.dart';
+import 'tab_navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,12 +28,12 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
         print(snapshot.connectionState);
 
-        HttpManager.getData(
-          Url.feedUrl,
-          success: (result) {
-            print(result);
-          },
-        );
+        // HttpManager.getData(
+        //   Url.feedUrl,
+        //   success: (result) {
+        //     print(result);
+        //   },
+        // );
 
         var widget = snapshot.connectionState == ConnectionState.done
             ? TabNavigation()

@@ -1,10 +1,11 @@
-import 'package:eyepetizer_project/config/string.dart';
-import 'package:eyepetizer_project/page/home/home_page.dart';
-import 'package:eyepetizer_project/utils/toast_util.dart';
-import 'package:eyepetizer_project/viewmodel/tab_navigation_viewmodel.dart';
-import 'package:eyepetizer_project/widget/provide_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'config/string.dart';
+import 'page/home/home_page.dart';
+import 'utils/toast_util.dart';
+import 'viewmodel/tab_navigation_viewmodel.dart';
+import 'widget/provide_widget.dart';
 
 class TabNavigation extends StatefulWidget {
   @override
@@ -16,7 +17,6 @@ class _TabNavigationState extends State<TabNavigation> {
 
   PageController _pageController = PageController();
 
-  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class _TabNavigationState extends State<TabNavigation> {
       child: Scaffold(
         body: PageView(
           controller: _pageController,
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             // Container(color: Colors.blue),
             const HomePage(),

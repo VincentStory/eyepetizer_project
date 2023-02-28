@@ -7,14 +7,12 @@ import '../config/string.dart';
 enum ViewState { loading, done, error }
 
 class LoadingStateWidget extends StatelessWidget {
-
   final ViewState viewState;
   final VoidCallback? retry;
-  final Widget? child;
+  final Widget child;
 
-  const LoadingStateWidget({super.key, this.viewState = ViewState
-      .loading, this.retry, this.child});
-
+  const LoadingStateWidget(
+      {super.key, this.viewState = ViewState.loading, this.retry, required this.child});
 
   // LoadingStateWidget(this.viewState, this.retry, this.child);
 
@@ -24,12 +22,10 @@ class LoadingStateWidget extends StatelessWidget {
       return _loadView;
     } else if (viewState == ViewState.error) {
       return _errorView;
+    } else {
+      return child;
     }
-    return _loadView;
   }
-
-
-
 
   Widget get _errorView {
     return Center(
@@ -67,11 +63,9 @@ class LoadingStateWidget extends StatelessWidget {
     );
   }
 
-
   Widget get _loadView {
     return const Center(
       child: CircularProgressIndicator(),
     );
   }
-
 }

@@ -1,6 +1,7 @@
 
 
-import 'package:eyepetizer_project/viewmodel/base_change_notifier.dart';
+
+import 'base_change_notifier.dart';
 
 class TabNavigationViewModel extends BaseChangeNotifier {
   int currentIndex = 0;

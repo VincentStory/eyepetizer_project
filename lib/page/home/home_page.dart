@@ -1,7 +1,8 @@
-import 'package:eyepetizer_project/config/string.dart';
-import 'package:eyepetizer_project/widget/app_bar.dart';
-import 'package:eyepetizer_project/widget/loading_state_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../../config/string.dart';
+import '../../widget/app_bar.dart';
+import 'home_body_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,10 +21,7 @@ class _HomePageState extends State<HomePage>
         ConfigString.home,
         showBack: false,
       ),
-      body: LoadingStateWidget(
-        viewState: ViewState.error,
-        child: Container(color: Colors.blue,),
-      )
+      body: const HomeBodyPage(),
     );
   }
 
