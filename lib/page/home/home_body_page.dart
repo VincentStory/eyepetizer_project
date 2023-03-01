@@ -1,3 +1,5 @@
+import 'package:eyepetizer_project/model/common_item.dart';
+import 'package:eyepetizer_project/state/base_list_state.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,24 +15,17 @@ class HomeBodyPage extends StatefulWidget {
   State<HomeBodyPage> createState() => _HomeBodyPageState();
 }
 
-class _HomeBodyPageState extends State<HomeBodyPage>
-    with AutomaticKeepAliveClientMixin {
+class _HomeBodyPageState extends BaseListState<Item,HomePageViewModel,HomeBodyPage>{
   @override
-  Widget build(BuildContext context) {
-    super.build(context);
-
-    return ProviderWidget<HomePageViewModel>(
-        model: HomePageViewModel(),
-        onModelInit: (model)=>model.refresh(),
-        builder: (context, model, child) {
-          return LoadingStateWidget(
-            child: _banner(model),
-            viewState: model.viewState,
-            retry: model.retry,
-
-          );
-        });
+  Widget getContentChild(HomePageViewModel model) {
+   return _banner(model);
   }
+
+  @override
+  HomePageViewModel get viewModel => HomePageViewModel();
+
+ 
+
 
 
   _banner(model){
