@@ -75,6 +75,7 @@ class _GetMaterialappWidgetState extends State<GetMaterialappWidget> {
       initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: () => widget.child),
+        GetPage(name: '/', page: () => VideoDetailPage),
       ],
     );
 

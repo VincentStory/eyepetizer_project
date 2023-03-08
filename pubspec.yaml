@@ -48,7 +48,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
 
-  flutter_splash_screen: ^1.0.0
+  flutter_splash_screen: 1.0.0
   fluttertoast: ^8.2.1
   http: ^0.13.5
   provider: ^5.0.0
@@ -56,6 +56,9 @@ dev_dependencies:
   flutter_swiper: ^1.1.6
   extended_image: ^4.1.0
   pull_to_refresh: ^2.0.0
+  # 9.依赖于Dart常用工具类库common_utils，以及对其他第三方库封装
+  flustars: ^2.0.1
+  share_plus: ^2.1.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
