@@ -4,9 +4,8 @@
 
 
 ## 效果图：
-|![imgage3.png](https://i.postimg.cc/X7QxQwCs/image3.png) |
-![imgage1.png](https://i.postimg.cc/g0KdrS5Y/image1.png) |
-![imgage2.png](https://i.postimg.cc/4344vRpK/image2.png)  |
-!
+|![imgage3.png](https://i.postimg.cc/X7QxQwCs/image3.png) 
+![imgage1.png](https://i.postimg.cc/g0KdrS5Y/image1.png) 
+![imgage2.png](https://i.postimg.cc/4344vRpK/image2.png) 
 
 
