@@ -1,16 +1,9 @@
-# eyepetizer_project
+>  一款模仿 Eyepetizer | 开眼视频的 开源app
 
-Eyepetizer Flutter Code
+- 使用flutter技术实现的一款开源app，给正在学习flutter技术的同学提供一些技术参考，本项目仅供学习和参考
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## 效果图：
+| ![app_02.png](https://upload-images.jianshu.io/upload_images/5549640-9380bb706c59e3af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/260) |
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
