@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'app_init.dart';
+import 'page/video/video_detail_page.dart';
 import 'tab_navigation.dart';
 
 void main() {
@@ -75,7 +76,7 @@ class _GetMaterialappWidgetState extends State<GetMaterialappWidget> {
       initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: () => widget.child),
-        GetPage(name: '/', page: () => VideoDetailPage),
+        GetPage(name: '/detail', page: () => const VideoDetailPage()),
       ],
     );
 

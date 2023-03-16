@@ -2,6 +2,8 @@
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">test.dokuin.id</domain>
+        <domain includeSubdomains="true">baobab.kaiyanapp.com</domain>
+        <domain includeSubdomains="true">ali.cdn.kaiyanapp.com</domain>
     </domain-config>
     <base-config cleartextTrafficPermitted="false" />
 </network-security-config>

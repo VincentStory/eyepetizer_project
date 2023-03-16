@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../utils/cache_image.dart';
+import '../utils/navigator_util.dart';
 import '../viewmodel/home_page_viewmodel.dart';
 
 class BannerWidget extends StatelessWidget {
@@ -53,7 +54,7 @@ class BannerWidget extends StatelessWidget {
       },
       onTap: (index) {
         print("点击了banner图。。$index}");
-        // TODO：跳转 detail
+        toNamed("/detail", model?.bannerList[index].data);
       },
       itemCount: model?.bannerList.length ?? 0,
       // banner 指示器
