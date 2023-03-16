@@ -5,6 +5,6 @@
 
 ## 效果图：
 | ![imgage1.png](https://i.postimg.cc/0yQNgqHp/image1.png) |
-![imgage2.png](https://github.com/VincentStory/eyepetizer_project/blob/master/image2.png)  |!
+![imgage2.png](https://i.postimg.cc/zB5BcRmf/image2.png)  |!
 
 
