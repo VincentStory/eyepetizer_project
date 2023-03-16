@@ -5,6 +5,8 @@ import 'package:chewie/chewie.dart';
 import 'package:video_player/video_player.dart';
 import 'package:chewie/src/material/material_progress_bar.dart';
 
+import '../utils/format_duration_util.dart';
+
 ///自定义播放器UI
 class VideoControlsWidget extends StatefulWidget {
   // 初始化是是否显示 加载动画：默认为true
@@ -79,7 +81,6 @@ class _VideoControlsWidgetState extends State<VideoControlsWidget>
     final _oldController = chewieController;
     chewieController = ChewieController.of(context);
     controller = chewieController?.videoPlayerController;
-
     // vsync:ticker 驱动动画,每次屏幕刷新都会调用TickerCallback，
     // 一般 SingleTickerProviderStateMixin 添加到 State，直接使用this
     playPauseIconAnimationController ??= AnimationController(
@@ -418,7 +419,7 @@ class _VideoControlsWidgetState extends State<VideoControlsWidget>
     return Padding(
       padding: EdgeInsets.only(right: 5.0),
       child: Text(
-        "$position/$duration",
+        "${formatDuration(position??const Duration(seconds: 0))}/${formatDuration(duration??const Duration(seconds: 0))}",
         style: TextStyle(fontSize: 10, color: Colors.white),
       ),
     );
