@@ -4,6 +4,7 @@
 
 
 ## 效果图：
-| ![app_02.png](https://upload-images.jianshu.io/upload_images/5549640-9380bb706c59e3af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/260) |
+| ![imgage1.png](https://github.com/VincentStory/eyepetizer_project/blob/master/image1.png) |
+![imgage2.png](https://github.com/VincentStory/eyepetizer_project/blob/master/image2.png)  |
 
 
