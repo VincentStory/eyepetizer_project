@@ -5,6 +5,6 @@
 
 ## 效果图：
 | ![imgage1.png](https://i.postimg.cc/g0KdrS5Y/image1.png) |
-![imgage2.png](https://i.postimg.cc/zB5BcRmf/image2.png)  |!
+![imgage2.png](https://i.postimg.cc/4344vRpK/image2.png)  |!
 
 
