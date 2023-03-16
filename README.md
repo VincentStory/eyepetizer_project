@@ -4,7 +4,7 @@
 
 
 ## 效果图：
-| ![imgage1.png](https://github.com/VincentStory/eyepetizer_project/blob/master/image1.png) |
-![imgage2.png](https://github.com/VincentStory/eyepetizer_project/blob/master/image2.png)  |
+| ![imgage1.png](https://github.com/VincentStory/eyepetizer_project/blob/master/image1.png) |!
+[imgage2.png](https://github.com/VincentStory/eyepetizer_project/blob/master/image2.png)  |!
 
 
