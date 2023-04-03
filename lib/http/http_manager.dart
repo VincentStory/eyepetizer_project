@@ -7,11 +7,16 @@ class HttpManager {
 
   static void getData(String url,
       {Map<String, String>? headers,
-      Function? success,
-      Function? fail,
-      Function? complete}) async {
+        Function? success,
+        Function? fail,
+        Function? complete}) async {
     try {
       var response = await http.get(Uri.parse(url), headers: headers);
+
+      print("http==url--${url}");
+      print(
+          "http==response--${json.decode(utf8decoder.convert(response.bodyBytes))}");
+
       if (response.statusCode == 200) {
         // 解析 json 字符串，返回的是 Map<String, dynamic> 类型
         var result = json.decode(utf8decoder.convert(response.bodyBytes));
@@ -31,6 +36,11 @@ class HttpManager {
   static Future requestData(String url, {Map<String, String>? headers}) async {
     try {
       var response = await http.get(Uri.parse(url), headers: headers);
+
+      print("http==url--${url}");
+      print(
+          "http==response--${json.decode(utf8decoder.convert(response.bodyBytes))}");
+
       if (response.statusCode == 200) {
         var result = json.decode(utf8decoder.convert(response.bodyBytes));
         return result;

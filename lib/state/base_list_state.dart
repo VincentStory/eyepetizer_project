@@ -9,9 +9,8 @@ import '../widget/provide_widget.dart';
 
 /// State
 abstract class BaseListState<L, M extends BaseListViewModel<L, PagingModel<L>>,
-        T extends StatefulWidget> extends State<T>
+T extends StatefulWidget> extends State<T>
     with AutomaticKeepAliveClientMixin {
-
   M get viewModel; //真实获取数据的仓库
 
   Widget getContentChild(M model); //真实的分页控件
@@ -30,9 +29,9 @@ abstract class BaseListState<L, M extends BaseListViewModel<L, PagingModel<L>>,
               color: Colors.white,
               child: SmartRefresher(
                 controller: model.refreshController,
+                enablePullUp: true,
                 onRefresh: model.refresh,
                 onLoading: model.loadMore,
-                enablePullUp: true,
                 // 显示的界面
                 child: getContentChild(model),
               ),

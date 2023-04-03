@@ -23,10 +23,10 @@ class VideoControlsWidget extends StatefulWidget {
 
   const VideoControlsWidget(
       {Key? key,
-      this.showLoadingOnInitialize = true,
-      this.showBigPlayIcon = true,
-      this.overlayUI,
-      this.bottomGradient})
+        this.showLoadingOnInitialize = true,
+        this.showBigPlayIcon = true,
+        this.overlayUI,
+        this.bottomGradient})
       : super(key: key);
 
   @override
@@ -156,13 +156,13 @@ class _VideoControlsWidgetState extends State<VideoControlsWidget>
               children: <Widget>[
                 // 不是正在播放 && duration == null || 正在缓冲
                 if (_latestValue != null &&
-                        _latestValue?.isPlaying == false &&
-                        _latestValue?.duration == null ||
+                    _latestValue?.isPlaying == false &&
+                    _latestValue?.duration == null ||
                     _latestValue?.isBuffering == true)
-                  // 圆形进度条
+                // 圆形进度条
                   Expanded(child: Center(child: _loadingIndicator()))
                 else
-                  // 创建点击区
+                // 创建点击区
                   _buildHitArea(),
                 // 底部控制栏
                 _buildBottomBar(context),
@@ -214,8 +214,8 @@ class _VideoControlsWidgetState extends State<VideoControlsWidget>
             // AnimatedOpacity:使子组件变的透明
             child: AnimatedOpacity(
               opacity: _latestValue != null &&
-                      _latestValue?.isPlaying == false &&
-                      !_dragging
+                  _latestValue?.isPlaying == false &&
+                  !_dragging
                   ? 1.0
                   : 0.0,
               // 动画执行的时间
@@ -245,19 +245,19 @@ class _VideoControlsWidgetState extends State<VideoControlsWidget>
             child: IconButton(
               icon: isFinished
                   ? const Icon(Icons.replay, size: 32.0)
-                  // AnimatedIcon:动画图标
+              // AnimatedIcon:动画图标
                   : AnimatedIcon(
-                      // 播放到暂停的动画图标
-                      icon: AnimatedIcons.play_pause,
-                      // 设置图标的动画
-                      progress: playPauseIconAnimationController ??
-                          AnimationController(
-                            vsync: this,
-                            duration: const Duration(milliseconds: 400),
-                            reverseDuration: const Duration(milliseconds: 400),
-                          ),
-                      size: 32.0,
+                // 播放到暂停的动画图标
+                icon: AnimatedIcons.play_pause,
+                // 设置图标的动画
+                progress: playPauseIconAnimationController ??
+                    AnimationController(
+                      vsync: this,
+                      duration: const Duration(milliseconds: 400),
+                      reverseDuration: const Duration(milliseconds: 400),
                     ),
+                size: 32.0,
+              ),
               onPressed: () {
                 // 开始播放或暂停
                 _playPause();
@@ -330,7 +330,7 @@ class _VideoControlsWidgetState extends State<VideoControlsWidget>
             _buildPlayPause(controller),
             // 进度条：如果是直播
             if (chewieController?.isLive == true)
-              // SizedBox:具有固定宽高的组件,适合控制2个组件之间的空隙
+            // SizedBox:具有固定宽高的组件,适合控制2个组件之间的空隙
               const SizedBox()
             else
               _buildProgressBar(),
@@ -419,7 +419,7 @@ class _VideoControlsWidgetState extends State<VideoControlsWidget>
     return Padding(
       padding: EdgeInsets.only(right: 5.0),
       child: Text(
-        "${formatDuration(position??const Duration(seconds: 0))}/${formatDuration(duration??const Duration(seconds: 0))}",
+        "${formatDuration(position ?? const Duration(seconds: 0))}/${formatDuration(duration ?? const Duration(seconds: 0))}",
         style: TextStyle(fontSize: 10, color: Colors.white),
       ),
     );
@@ -521,10 +521,10 @@ class _VideoControlsWidgetState extends State<VideoControlsWidget>
       chewieController?.toggleFullScreen();
       _showAfterExpandCollapseTimer =
           Timer(const Duration(milliseconds: 300), () {
-        setState(() {
-          _cancelAndRestartTimer();
-        });
-      });
+            setState(() {
+              _cancelAndRestartTimer();
+            });
+          });
     });
   }
 
@@ -559,9 +559,9 @@ class _VideoControlsWidgetState extends State<VideoControlsWidget>
   _overlayUI() {
     return widget.overlayUI != null
         ? AnimatedOpacity(
-            opacity: _hideStuff ? 0.0 : 1.0,
-            duration: Duration(milliseconds: 300),
-            child: widget.overlayUI)
+        opacity: _hideStuff ? 0.0 : 1.0,
+        duration: Duration(milliseconds: 300),
+        child: widget.overlayUI)
         : Container();
   }
 }
